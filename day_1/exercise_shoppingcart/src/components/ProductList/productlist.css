@@ -1,0 +1,33 @@
+.product {
+  padding: 20px;
+  width: 450px;
+  border: 3px solid #333;
+  margin: 40px auto;
+  border-radius: 8px;
+}
+
+.product-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-list li {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+button {
+  padding: 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: aqua;
+}
