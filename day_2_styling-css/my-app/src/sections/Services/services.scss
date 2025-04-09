@@ -1,0 +1,38 @@
+@use "../../assets/scss/variable" as *;
+
+.service-container {
+  display: flex;
+  margin: 0 100px;
+  padding: 60px 0;
+  .service {
+    display: flex;
+    &-left {
+      margin-right: 20px;
+      i {
+        font-size: 36px;
+        color: $primary-color;
+      }
+    }
+
+    &-reight {
+      h4 {
+        font-size: 16px;
+        font-weight: 700;
+        margin-bottom: 6px;
+      }
+      p {
+        font-size: 12px;
+        color: #727182;
+        margin-bottom: 6px;
+      }
+      a {
+        font-size: 12px;
+        color: #6388ab;
+        text-decoration: none;
+        i {
+          margin-left: 6px;
+        }
+      }
+    }
+  }
+}

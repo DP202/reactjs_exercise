@@ -32,10 +32,40 @@ const ShoppingCart = () => {
       },
     }));
   };
+
+  const addQuantity = (productId) => {
+    setCart((prevCart) => ({
+      ...prevCart,
+      [productId]: {
+        ...prevCart[productId],
+        quantity: prevCart[productId] ? prevCart[productId].quantity + 1 : 1,
+      },
+    }));
+  };
+
+  const minusQuantity = (productId) => {
+    setCart((prevCart) => ({
+      ...prevCart,
+      [productId]: {
+        ...prevCart[productId],
+        quantity:
+          prevCart[productId] <= 0 ? (
+            <p>Sản phẩm trống</p>
+          ) : (
+            prevCart[productId].quantity - 1
+          ),
+      },
+    }));
+  };
+
   return (
     <div>
       <ProductList products={data} addToCart={addToCart} />
-      <Cart cart={cart} />
+      <Cart
+        cart={cart}
+        addQuantity={addQuantity}
+        minusQuantity={minusQuantity}
+      />
     </div>
   );
 };

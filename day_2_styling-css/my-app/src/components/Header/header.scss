@@ -1,0 +1,121 @@
+@use "../../assets/scss/variable" as *;
+
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 20px 0;
+  background-color: rgba(14, 29, 52, 0.9);
+  color: #212529;
+  transition: all 1s linear;
+  z-index: 999;
+  &-container {
+    display: flex;
+    align-items: center;
+    margin: 0 100px;
+
+    .header-logo {
+      font-size: 16px;
+      margin: 0;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .menu {
+      margin-left: auto;
+      &-list {
+        display: flex;
+        list-style: none;
+        align-items: center;
+        &__item {
+          padding: 18px 15px;
+          cursor: pointer;
+          a {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 18px;
+          }
+          .active {
+            color: #fff;
+          }
+        }
+        &__item:hover a {
+          color: #fff;
+        }
+        .dropdown {
+          position: relative;
+          &-icon {
+            margin-left: 5px;
+            color: rgba(255, 255, 255, 0.6);
+          }
+          &-icon:hover {
+            color: #fff;
+          }
+
+          &-list {
+            display: none;
+            background-color: white;
+            border-radius: 4px;
+            list-style: none;
+            position: absolute;
+            width: 200px;
+            top: 100%;
+            left: 16px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+            &__item {
+              padding: 10px 20px;
+              font-size: 18px;
+              border-style: none;
+              position: relative;
+
+              a {
+                color: #333;
+                font-size: 18px;
+                text-decoration: none;
+              }
+              a:hover {
+                color: #0d42ff;
+                font-weight: 400;
+              }
+              i {
+                margin-left: 40px;
+                color: #333;
+                font-size: 15px;
+              }
+              i:hover {
+                color: #0d42ff;
+              }
+            }
+            .deep-list:hover .dropdown-list__deep {
+              display: block;
+            }
+          }
+          &-list__deep {
+            position: absolute;
+            left: -100%;
+            top: 0;
+            display: none;
+          }
+        }
+        .dropdown:hover .list {
+          display: block;
+        }
+      }
+    }
+    button {
+      padding: 8px 25px;
+      border-radius: 4px;
+      border-style: none;
+      background-color: $primary-color;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      margin-left: 20px;
+    }
+    button:hover {
+      background-color: #0d42ff;
+    }
+  }
+}

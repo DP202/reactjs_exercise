@@ -1,0 +1,57 @@
+@use "../../assets/scss/variable" as *;
+
+.about-container {
+  max-width: 100%;
+  margin: 0 100px;
+  padding: 60px 0;
+  .about {
+    width: 100%;
+    display: flex;
+    &-left {
+      width: 50%;
+      h3 {
+        font-size: 30px;
+        margin-bottom: 8px;
+      }
+      p {
+        font-size: 16px;
+        margin-bottom: 16px;
+      }
+      .about-list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        &__item {
+          display: flex;
+          margin-top: 40px;
+          align-items: center;
+
+          i {
+            font-size: 48px;
+            color: $primary-color;
+            margin-right: 20px;
+          }
+
+          .about-desc {
+            h5 {
+              font-size: 18px;
+              font-weight: 700;
+              margin-bottom: 8px;
+            }
+            p {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+    &-right {
+      width: 50%;
+      padding: 0 12px;
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
