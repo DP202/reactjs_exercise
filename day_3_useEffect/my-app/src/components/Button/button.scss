@@ -1,0 +1,17 @@
+.btn-submit {
+  margin-top: 20px;
+  padding: 15px;
+  text-align: center;
+  width: 100%;
+  border: none;
+  background-color: green;
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgb(3, 53, 3);
+  }
+}
